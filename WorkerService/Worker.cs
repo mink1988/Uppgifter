@@ -13,7 +13,7 @@ namespace WorkerService
     {
         private readonly ILogger<Worker> _logger;
 
-        private string _url = "https://gais.se";
+        private string _url = "http://api.openweathermap.org/data/2.5/weather?q=orebro&units=metric&appid=a627a0c523b7b9134ce9b828fcd748f3";
         private HttpClient _client;
         private HttpResponseMessage _result;
 
