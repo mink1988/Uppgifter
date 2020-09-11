@@ -13,7 +13,7 @@ namespace WorkerService
     {
         private readonly ILogger<Worker> _logger;
 
-        private string _url = "https://google.com";
+        private string _url = "https://gais.se";
         private HttpClient _client;
         private HttpResponseMessage _result;
 
