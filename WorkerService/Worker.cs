@@ -30,6 +30,7 @@ Movie m = JsonConvert.DeserializeObject<Movie>(json);
 
     string name = m.Name;
     // Bad Boys
+        xxxxzzzzzz
         */
 
     public Worker(ILogger<Worker> logger)
