@@ -16,8 +16,23 @@ namespace WorkerService
         private string _url = "http://api.openweathermap.org/data/2.5/weather?q=orebro&units=metric&appid=a627a0c523b7b9134ce9b828fcd748f3";
         private HttpClient _client;
         private HttpResponseMessage _result;
+        //await _result.Content.ReadAsStringAsync();
+        /*string json = @"{
+  'Name': 'Bad Boys',
+  'ReleaseDate': '1995-4-7T00:00:00',
+  'Genres': [
+    'Action',
+    'Comedy'
+  ]
+    }";
 
-        public Worker(ILogger<Worker> logger)
+Movie m = JsonConvert.DeserializeObject<Movie>(json);
+
+    string name = m.Name;
+    // Bad Boys
+        */
+
+    public Worker(ILogger<Worker> logger)
         {
             _logger = logger;
             
@@ -53,7 +68,7 @@ namespace WorkerService
                 {
                     _logger.LogInformation($"Failed. The webbsite ({_url}) - {ex.Message}");
                 }
-                await Task.Delay(5 * 1000, stoppingToken);
+                await Task.Delay(60 * 1000, stoppingToken);
             }
         }
     }
