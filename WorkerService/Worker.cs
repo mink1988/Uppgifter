@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace WorkerService
+namespace WorkerServiceVG
 {
     public class Worker : BackgroundService
     {
@@ -30,7 +30,7 @@ Movie m = JsonConvert.DeserializeObject<Movie>(json);
 
     string name = m.Name;
     // Bad Boys
-        xxxxzzzzzz
+        xxxxzzzzzzss
         */
 
     public Worker(ILogger<Worker> logger)

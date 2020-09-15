@@ -7,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
 
-namespace WorkerService
+namespace WorkerServiceVG
 {
     public class Program
     {
