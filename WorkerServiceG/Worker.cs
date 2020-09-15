@@ -44,7 +44,7 @@ namespace WorkerServiceG
                     _logger.LogInformation($"The limit has been reached! {genRand} degrees! It's nice weather outside!");
                 }
                
-                await Task.Delay(10 * 1000, stoppingToken);
+                await Task.Delay(60 * 1000, stoppingToken);
             }
         }
     }
