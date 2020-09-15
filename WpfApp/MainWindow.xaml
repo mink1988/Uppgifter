@@ -29,7 +29,7 @@
             <StackPanel Grid.ColumnSpan="2">
 
 
-                <Button x:Name="Message" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="white" Padding="20,430,0,10" HorizontalContentAlignment="Left">
+                <Button x:Name="Message" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="white" Padding="20,450,0,10" HorizontalContentAlignment="Left">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="15,0,0,0" Text="Message" />
                     </StackPanel>
