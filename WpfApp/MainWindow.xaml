@@ -4,8 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp"
+        xmlns:models="clr-namespace:WpfApp.Models"
+        xmlns:views="clr-namespace:WpfApp.Views"
+        
         mc:Ignorable="d"
-        Title="Email Client" Height="720" Width="1200" >
+        Title="" Height="720" Width="1200" Opacity="0.99" ResizeMode="CanResize"  >
     <Grid>
 
         <Grid.ColumnDefinitions>
@@ -15,11 +18,9 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-
         <Grid Grid.Column="0" Background="Royalblue">
 
         </Grid>
-
 
         <Grid x:Name="mainMenu_Grid" Grid.Column="1" Background="CornflowerBlue">
             <Grid.ColumnDefinitions>
@@ -28,32 +29,34 @@
             </Grid.ColumnDefinitions>
             <StackPanel Grid.ColumnSpan="2">
 
+                <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE91F;" FontSize="100" Foreground="White" Margin="0,20,0,0" HorizontalAlignment="Center"/>
+                <TextBlock Text="Alexander Bohlin"  HorizontalAlignment="Center" Foreground="White" FontSize="14" Padding="0,20"/>
 
-                <Button x:Name="Message" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="white" Padding="20,450,0,10" HorizontalContentAlignment="Left">
+                <Button x:Name="btnMessages" Click="btnMessages_Click" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="white" Padding="20,10,0,10" HorizontalContentAlignment="Left" UseLayoutRounding="False" Margin="0,270,0,0">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Margin="15,0,0,0" Text="Message" />
+                        <TextBlock Margin="15,0,0,0" Text="Messages" />
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="btnContacts" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="white" Padding="20,20,0,10" HorizontalContentAlignment="Left">
+                <Button x:Name="btnContacts" Click="btnContacts_Click" Height="auto" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="white" Padding="20,20,0,10" HorizontalContentAlignment="Left">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="15,0,0,0" Text="Contacts" />
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="btnCalendar" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="white" Padding="20,20,0,10" HorizontalContentAlignment="Left">
+                <Button x:Name="btnCalendar" Height="auto" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="white" Padding="20,20,0,10" HorizontalContentAlignment="Left">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="15,0,0,0" Text="Calendar" />
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="btnTasks" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="white" Padding="20,20,0,10" HorizontalContentAlignment="Left">
+                <Button x:Name="btnTasks" Height="auto" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="white" Padding="20,20,0,10" HorizontalContentAlignment="Left">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="15,0,0,0" Text="Tasks" />
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="btnSettings" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="white" Padding="20,20,0,10" HorizontalContentAlignment="Left">
+                <Button x:Name="btnSettings" Height="auto" Background="Transparent" BorderThickness="0" FontFamily="Century Gothic" FontSize="16" Foreground="white" Padding="20,20,0,10" HorizontalContentAlignment="Left">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="15,0,0,0" Text="Settings" />
                     </StackPanel>
@@ -63,7 +66,130 @@
         </Grid>
 
 
-        <Grid x:Name="subMenu_Grid" Grid.Column="2" Background="AliceBlue"/>
+        <Grid x:Name="subMenu_Grid" Grid.Column="2" Background="AliceBlue">
+            <StackPanel>
+                <TextBlock Text="Messages" FontSize="25" Margin="30,40"/>
+                <Button x:Name="ContactName" Height="auto" Background="Transparent" BorderThickness="0,0.5,0,0.5" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From ContactName                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.31" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="aContactName" Height="auto" Background="Transparent" BorderThickness="0,0,0,0.5" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From ContactName                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.31" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="bContactName" Height="auto" Background="Transparent" BorderThickness="0,0,0,0.5" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From ContactName                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.31" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="cContactName" Height="auto" Background="Transparent" BorderThickness="0,0,0,0.5" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From ContactName                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.31" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+                <Button x:Name="dContactName" Height="auto" Background="Transparent" BorderThickness="0,0,0,0.5" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From ContactName                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.31" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+                <Button x:Name="eContactName" Height="auto" Background="Transparent" BorderThickness="0,0,0,0.5" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From ContactName                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.31" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+                <Button x:Name="fContactName" Height="auto" Background="Transparent" BorderThickness="0,0,0,0.5" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From ContactName                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.31" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+                <Button x:Name="gContactName" Height="auto" Background="Transparent" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From ContactName                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.31" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+
+        </Grid>
+
+        <Grid x:Name="sub_Menu2_Grid" Grid.Column="3" Background="White">
+            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE91F;" FontSize="50" Foreground="AliceBlue" Margin="30,40,0,0" HorizontalAlignment="Left" />
+            <TextBlock Text="From Contact Name" HorizontalAlignment="Left" Margin="100,50,0,0" FontWeight="Bold" FontSize="16"/>
+            <TextBlock Text="To Firstname Lastname"  HorizontalAlignment="Left" Margin="100,50,0,0" Foreground="Black" Padding="0,20"/>
+
+
+
+            <TextBlock Text="Hej där, " Margin="10,120,50,20"/>
+            <TextBlock Text="Här kommer ett litet meddelande som kan vara vad som helst. Det står inget speciellt i detta" Margin="10,135,50,20" />
+            <TextBlock Text="meddelande utan detta är bara för att fylla ut detta utrymme."  Margin="10,150,50,20"      />
+            <TextBlock Text="Vi hörs vidare och ser hur vi kan lösa det."  Margin="10,165,50,20"  />
+            <TextBlock Text="Trevlig dag!" Margin="10,195,50,20"/>
+            <TextBlock Text="Med vänliga hälsningar" Margin="10,210,50,20" />
+            <TextBlock Text="Contact Name" Margin="10,225,50,20"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
