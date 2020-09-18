@@ -8,7 +8,7 @@
         xmlns:views="clr-namespace:WpfApp.Views"
             
         mc:Ignorable="d"
-        Title="" Height="750" Width="1300" Opacity="0.99" ResizeMode="CanResize" WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterScreen">
+        Title="" Height="750" Width="1300" Opacity="0.99" ResizeMode="CanResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
         <DataTemplate x:Name="MessageViewTemplate" DataType="{x:Type models:MessageViewModel}">
@@ -32,7 +32,7 @@
         </Grid>
 
         <Grid x:Name="mainMenu_Grid" Grid.Column="1" Background="CornflowerBlue">
-            
+
             <StackPanel>
 
                 <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE91F;" FontSize="100" Foreground="White" Margin="0,20,0,0" HorizontalAlignment="Center"/>
