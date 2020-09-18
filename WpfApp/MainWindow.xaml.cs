@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp.Models;
 
 namespace WpfApp
 {
@@ -27,11 +28,12 @@ namespace WpfApp
 
         private void btnMessages_Click(object sender, RoutedEventArgs e)
         {
-
+            DataContext = new MessageViewModel();
         }
 
         private void btnContacts_Click(object sender, RoutedEventArgs e)
         {
+            DataContext = new ContactViewModel();
 
         }
     }

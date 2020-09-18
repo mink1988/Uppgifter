@@ -4,7 +4,12 @@ using System.Text;
 
 namespace WpfApp.Models
 {
-    class MessageModel
+    class MessageViewModel
     {
+   
+    
+    
     }
+
+
 }

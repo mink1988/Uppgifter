@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WpfApp.Models
 {
-    class ContactModel
+    class ContactViewModel
     {
     }
 }

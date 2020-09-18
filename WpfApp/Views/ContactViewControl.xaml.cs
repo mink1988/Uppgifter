@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace WpfApp.Views
 {
     /// <summary>
-    /// Interaction logic for ContactViewModel.xaml
+    /// Interaction logic for ContactViewControl.xaml
     /// </summary>
-    public partial class ContactViewModel : UserControl
+    public partial class ContactViewControl : UserControl
     {
-        public ContactViewModel()
+        public ContactViewControl()
         {
             InitializeComponent();
         }

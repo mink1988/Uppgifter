@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace WpfApp.Views
 {
     /// <summary>
-    /// Interaction logic for MessageViewModel.xaml
+    /// Interaction logic for MessageViewControl.xaml
     /// </summary>
-    public partial class MessageViewModel : UserControl
+    public partial class MessageViewControl : UserControl
     {
-        public MessageViewModel()
+        public MessageViewControl()
         {
             InitializeComponent();
         }

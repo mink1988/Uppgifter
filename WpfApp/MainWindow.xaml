@@ -6,9 +6,24 @@
         xmlns:local="clr-namespace:WpfApp"
         xmlns:models="clr-namespace:WpfApp.Models"
         xmlns:views="clr-namespace:WpfApp.Views"
-        
+            
         mc:Ignorable="d"
-        Title="" Height="720" Width="1300" Opacity="0.99" ResizeMode="CanResize" WindowStyle="None"  >
+        Title="" Height="720" Width="1300" Opacity="0.99" ResizeMode="CanResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <DataTemplate x:Name="MessageViewTemplate" DataType="{x:Type models:MessageViewModel}">
+            <views:MessageViewControl DataContext="{Binding}" />
+        </DataTemplate>
+        <DataTemplate x:Name="ContactViewTemplate" DataType="{x:Type models:ContactViewModel}">
+                <views:ContactViewControl DataContext="{Binding}" />
+            </DataTemplate>
+        
+        
+    </Window.Resources>
+
+  
+
+ 
     <Grid>
 
         <Grid.ColumnDefinitions>
@@ -28,6 +43,8 @@
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.ColumnSpan="2">
+
+                <ContentControl Grid.Column="2" Content="{Binding}"/>
 
                 <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE91F;" FontSize="100" Foreground="White" Margin="0,20,0,0" HorizontalAlignment="Center"/>
                 <TextBlock Text="Alexander Bohlin"  HorizontalAlignment="Center" Foreground="White" FontSize="14" Padding="0,20"/>
