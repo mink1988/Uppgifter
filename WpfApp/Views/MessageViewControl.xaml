@@ -5,8 +5,113 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApp.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="Red">
-            
+             d:DesignHeight="750" d:DesignWidth="1050">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="420"/>
+            <ColumnDefinition Width="630"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="AliceBlue">
+            <StackPanel>
+                <TextBlock Text="Messages" FontSize="22" Margin="30,40"/>
+                
+            <Button x:Name="ContactName" Height="auto" Background="Transparent" BorderThickness="0,0.5,0,0.5" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From Contact Name                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.31" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="aContactName" Height="auto" Background="Transparent" BorderThickness="0,0,0,0.5" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From Contact Name                     2020-09-01"/>
+                                  
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.30" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="bContactName" Height="auto" Background="Transparent" BorderThickness="0,0,0,0.5" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From Contact Name                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.29" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="cContactName" Height="auto" Background="Transparent" BorderThickness="0,0,0,0.5" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From Contact Name                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.28" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+                <Button x:Name="dContactName" Height="auto" Background="Transparent" BorderThickness="0,0,0,0.5" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From Contact Name                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.27" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+                <Button x:Name="eContactName" Height="auto" Background="Transparent" BorderThickness="0,0,0,0.5" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From Contact Name                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.26" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+                <Button x:Name="fContactName" Height="auto" Background="Transparent" BorderThickness="0,0,0,0.5" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From Contact Name                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.25" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+                <Button x:Name="gContactName" Height="auto" Background="Transparent" BorderThickness="0,0,0,0" FontFamily="Century Gothic" FontSize="16" Foreground="Black" Padding="20,20,0,20" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Margin="10,0,0,0" Text=" From Contact Name                     2020-09-01"/>
+
+                        <TextBlock Margin="10,0,0,0" Text=" Short description of the message here                         14.24" FontSize="12" FontWeight="Normal"/>
+
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1" Background="White">
+            <TextBlock FontFamily="Segoe MDL2 Assets" Text="&#xE91F;" FontSize="50" Foreground="AliceBlue" Margin="30,40,0,0" HorizontalAlignment="Left" />
+            <TextBlock Text="From Contact Name" HorizontalAlignment="Left" Margin="100,50,0,0" FontWeight="Bold" FontSize="16"/>
+            <TextBlock Text="To Firstname Lastname"  HorizontalAlignment="Left" Margin="100,50,0,0" Foreground="Black" Padding="0,20"/>
+
+
+
+            <TextBlock Text="Hej där, " Margin="25,130,0,20" FontSize="14"/>
+            <TextBlock Text="Här kommer ett litet meddelande som kan vara vad som helst. Det står inget speciellt i detta" Margin="25,150,0,20" FontSize="14" />
+            <TextBlock Text="meddelande utan detta är bara för att fylla ut detta utrymme."  Margin="25,170,0,20" FontSize="14"      />
+            <TextBlock Text="Vi hörs vidare och ser hur vi kan lösa det."  Margin="25,190,0,20" FontSize="14"  />
+            <TextBlock Text="Trevlig dag!" Margin="25,225,0,20" FontSize="14"/>
+
+            <TextBlock Text="Med vänliga hälsningar" Margin="25,250,0,20" Padding="0,10" FontStyle="Italic" Foreground="Gray"/>
+            <TextBlock Text="Contact Name" Margin="25,270,0,20" Padding="0,8" FontStyle="Italic" Foreground="Gray"/>
+
+
+        </Grid>
+
+      
+        
+        
+        
+        
+        
     </Grid>
+    
 </UserControl>
