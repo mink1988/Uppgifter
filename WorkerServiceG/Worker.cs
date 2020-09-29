@@ -37,7 +37,7 @@ namespace WorkerServiceG
             while (!stoppingToken.IsCancellationRequested)
             {
                 Random r = new Random();
-                int genRand = r.Next(-10, 30);
+                int genRand = r.Next(10, 30);
 
                 if (genRand>20)
                 {

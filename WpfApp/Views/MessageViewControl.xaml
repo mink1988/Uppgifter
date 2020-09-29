@@ -13,6 +13,11 @@
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0" Background="AliceBlue">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+
+            </Grid.ColumnDefinitions>
             <StackPanel>
                 <TextBlock Text="Messages" FontSize="22" Margin="30,40"/>
                 
@@ -105,11 +110,7 @@
 
 
         </Grid>
-
-      
-        
-        
-        
+       
         
         
     </Grid>

@@ -1,45 +1,26 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace WorkerServiceVG
 {
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
-
         private string _url = "http://api.openweathermap.org/data/2.5/weather?q=orebro&units=metric&appid=a627a0c523b7b9134ce9b828fcd748f3";
         private HttpClient _client;
-        private HttpResponseMessage _result;
-        //await _result.Content.ReadAsStringAsync();
-        /*string json = @"{
-  'Name': 'Bad Boys',
-  'ReleaseDate': '1995-4-7T00:00:00',
-  'Genres': [
-    'Action',
-    'Comedy'
-  ]
-    }";
 
-Movie m = JsonConvert.DeserializeObject<Movie>(json);
-
-    string name = m.Name;
-    // Bad Boys
-        xxxxzzzzzzssxxzzaa
-        */
-
-    public Worker(ILogger<Worker> logger)
+        public Worker(ILogger<Worker> logger)
         {
             _logger = logger;
-            
         }
 
-        public override Task StartAsync(CancellationToken cancellationToken)
+        public override  Task StartAsync(CancellationToken cancellationToken)
         {
             _client = new HttpClient();
             _logger.LogInformation("The service has been started");
@@ -48,28 +29,32 @@ Movie m = JsonConvert.DeserializeObject<Movie>(json);
 
         public override Task StopAsync(CancellationToken cancellationToken)
         {
-            _client.Dispose();
+            
             _logger.LogInformation("The service has been stopped");
             return base.StopAsync(cancellationToken);
         }
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+
+        protected override async Task ExecuteAsync(CancellationToken cancellationToken)
         {
-            while (!stoppingToken.IsCancellationRequested)
+            while (!cancellationToken.IsCancellationRequested)
             {
                 try
                 {
+                    var response = await _client.GetAsync(_url);
+                    var json = await response.Content.ReadAsStringAsync();
+                    var forecast = JsonConvert.DeserializeObject<Forecast>(json);
 
-                    _result = await _client.GetAsync(_url);
-
-                    if (_result.IsSuccessStatusCode)
-                        _logger.LogInformation($"The website ({_url}) is up. Status Code = {_result.StatusCode}");
-                    else _logger.LogInformation($"The website ({_url}) is down. Status Code = {_result.StatusCode}");
+                    if (forecast.main.temp>10)
+                    {
+                        _logger.LogInformation($"The limit has been reached! {forecast.main.temp} degrees!");
+                    }
+                      
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogInformation($"Failed. The webbsite ({_url}) - {ex.Message}");
+                    _logger.LogError(ex.Message, ex);
                 }
-                await Task.Delay(60 * 1000, stoppingToken);
+                await Task.Delay(60 * 1000, cancellationToken);
             }
         }
     }

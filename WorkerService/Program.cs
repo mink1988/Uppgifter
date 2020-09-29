@@ -19,8 +19,7 @@ namespace WorkerServiceVG
             .Enrich.FromLogContext()
             .WriteTo.File(@"C:\Users\alexa\workerservice\log\LogFile.txt")
             .CreateLogger();
-
-            
+  
             try
              { 
                 Log.Information("Starting WorkerService...");
@@ -36,9 +35,7 @@ namespace WorkerServiceVG
             finally
             {
                 Log.CloseAndFlush();
-        }
-
-         
+        }  
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

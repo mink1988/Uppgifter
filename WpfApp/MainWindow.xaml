@@ -8,7 +8,7 @@
         xmlns:views="clr-namespace:WpfApp.Views"
             
         mc:Ignorable="d"
-        Title="" Height="750" Width="1300" Opacity="0.99" ResizeMode="CanResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
+        Title="" Height="720" Width="1300" Opacity="0.99" ResizeMode="CanResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
         <DataTemplate x:Name="MessageViewTemplate" DataType="{x:Type models:MessageViewModel}">
