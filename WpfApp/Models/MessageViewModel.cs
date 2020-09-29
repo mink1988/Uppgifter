@@ -7,9 +7,6 @@ namespace WpfApp.Models
     class MessageViewModel
     {
             
-    
-    
     }
-
 
 }
